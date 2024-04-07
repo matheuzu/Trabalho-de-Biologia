@@ -36,7 +36,6 @@ function gerarDivAleatoria()
   }, 1000 / 90); 
 }
 
-setInterval(gerarDivAleatoria, INTERVALO_GERACAO);
 
 // Array de imagens
 const imagens = [

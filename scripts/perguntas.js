@@ -1,17 +1,17 @@
-const PERGUNTAS_JSON = `perguntas-${JSON_ID}.json`; 
 
 const JANELA_FLUTUANTE = document.getElementById("janela-flutuante");
 const TITULO_PERGUNTA = document.getElementById("titulo");
 const TEXTO_PERGUNTA = document.getElementById("pergunta");
 const RESPOSTAS = document.getElementById("respostas");
 const CRONOMETRO = document.getElementById("cronometro");
-const INTERVALO_PERGUNTA = 2000; // ms
+
 let respostaCorreta;
 
 let perguntasVisitadas = [];
 
 function buscarPerguntaAleatoria() 
 {
+    const PERGUNTAS_JSON = `perguntas-${JSON_ID}.json`; 
     fetch(PERGUNTAS_JSON)
       .then((response) => response.json())
         .then((json) => {
@@ -138,5 +138,3 @@ function startTimer(seconds) {
 }
 
 
-
-setTimeout(buscarPerguntaAleatoria, INTERVALO_PERGUNTA);

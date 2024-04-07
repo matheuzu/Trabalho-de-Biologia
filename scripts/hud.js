@@ -61,4 +61,3 @@ function batimento () {
   }, 100)
 }
 
-const intervalo = setInterval(hud, 10);

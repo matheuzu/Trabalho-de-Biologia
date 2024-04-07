@@ -35,8 +35,5 @@ function verificarColisao(jogador, obstaculo) {
   }
 }
 
-setInterval(() => {
-  let obstaculo = document.getElementById("obstaculo");
-  verificarColisao(player, obstaculo);
-}, 100);
+
 
