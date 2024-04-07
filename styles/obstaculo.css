@@ -1,0 +1,9 @@
+#obstaculo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top:  20vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+} 

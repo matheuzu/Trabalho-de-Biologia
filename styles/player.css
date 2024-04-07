@@ -1,0 +1,31 @@
+#player {
+    position: relative;
+    background-image: url("../images/player/player.gif");
+    background-size: cover;
+    width: 22vh;
+    height: 27vh;
+    margin-left: 100px;
+    top: 25vw;
+    z-index: 3;
+}
+
+.imune {
+  opacity: 0.5;
+}
+
+.pulo {
+    animation: pulo 1s ease-in-out infinite;
+}
+  
+  @keyframes pulo {
+    0% {
+      top: 25vw;
+    }
+    50% {
+      top: 15vw;
+    }
+    100% {
+      top: 25vw;
+    }
+  }
+  

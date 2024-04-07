@@ -1,0 +1,66 @@
+#janela-flutuante {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 16px;
+  border: 1px solid #ddd;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#janela-flutuante.ativa {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+#cronometro {
+  position: absolute;
+  text-align: end;
+  font-size: 4em;
+  opacity: 0;
+}
+
+#cronometro.ativa {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.pergunta {
+  margin-bottom: 16px;
+}
+
+.respostas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  margin: 4px;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+button.certa {
+  background-color: #77dd77;
+}
+
+button.errada {
+  background-color: #ff6666;
+}
