@@ -26,15 +26,16 @@ function startGame(seconds) {
   
             if (counter < 0) {
   
-              clearInterval(clock);
-              target.remove();
+                clearInterval(clock);
+                target.remove();
+                
                 const intervalo = setInterval(hud, 10);
                 setInterval(gerarDivAleatoria, INTERVALO_GERACAO);
                 setTimeout(buscarPerguntaAleatoria, INTERVALO_PERGUNTA);
                 setInterval(() => {
                     let obstaculo = document.getElementById("obstaculo");
                     verificarColisao(player, obstaculo);
-                  }, 100);
+                }, 100);
             }
         }, 1000);
     }

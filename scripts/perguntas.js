@@ -31,26 +31,26 @@ function buscarPerguntaAleatoria()
       });
   }
 
-  function exibirPergunta(pergunta) 
-  {
-    TITULO_PERGUNTA.textContent = "Pergunta";
-    TEXTO_PERGUNTA.textContent = pergunta.pergunta;
-  
-    RESPOSTAS.innerHTML = "";
-  
-    for (let i = 0; i < pergunta.respostas.length; i++) 
-    {
-      const botao = document.createElement("button");
-      botao.id = `resposta-${i}`;
-      botao.textContent = pergunta.respostas[i];
-      botao.onclick = () => verificarResposta(i, pergunta.correta);
-      RESPOSTAS.appendChild(botao);
-    }
-    
-    respostaCorreta = pergunta.correta
-    abrirJanela();
+function exibirPergunta(pergunta) 
+{
+  TITULO_PERGUNTA.textContent = "Pergunta";
+  TEXTO_PERGUNTA.textContent = pergunta.pergunta;
 
+  RESPOSTAS.innerHTML = "";
+
+  for (let i = 0; i < pergunta.respostas.length; i++) 
+  {
+    const botao = document.createElement("button");
+    botao.id = `resposta-${i}`;
+    botao.textContent = pergunta.respostas[i];
+    botao.onclick = () => verificarResposta(i, pergunta.correta);
+    RESPOSTAS.appendChild(botao);
   }
+  
+  respostaCorreta = pergunta.correta
+  abrirJanela();
+
+}
 
 function abrirJanela() {
   CRONOMETRO.classList.add("ativa")

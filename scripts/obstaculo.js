@@ -7,7 +7,6 @@ function gerarNumeroAleatorio(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
 function gerarDivAleatoria() 
 {
   const div = document.createElement("div");
@@ -36,17 +35,12 @@ function gerarDivAleatoria()
   }, 1000 / 90); 
 }
 
-
-// Array de imagens
 const imagens = [
   "url(images/bebado.png)",
   "url(images/lata-de-lixo.png)",
   "url(images/lixo.png)"
 ];
 
-// Função para gerar um número aleatório
-
-// Função para definir a background-image aleatória
 function definirBackgroundAleatorio(div) {
   const indiceAleatorio = gerarNumeroAleatorio(0, imagens.length - 1);
   const imagemAleatoria = imagens[indiceAleatorio];

@@ -22,10 +22,8 @@ function verificarColisao(jogador, obstaculo) {
       {
         if(colidindo) 
         {
-          colidindo = false;
-            
-          if(!imunidade) 
-            perdePontuacao(25);
+          colidindo = false;            
+          perdePontuacao(25);
         }
       } 
 
