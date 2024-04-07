@@ -1,4 +1,4 @@
-const PERGUNTAS_JSON = "perguntas.json"; 
+const PERGUNTAS_JSON = `perguntas-${JSON_ID}.json`; 
 
 const JANELA_FLUTUANTE = document.getElementById("janela-flutuante");
 const TITULO_PERGUNTA = document.getElementById("titulo");
