@@ -58,7 +58,7 @@ function verificarResposta(idResposta, correta)
   if (idResposta == correta) {
     mostrarRespostaCorreta(idResposta);
     fecharJanela();
-    aumentaPontuacao(200); 
+    aumentaPontuacao(400); 
     gameControl();
     efeitoSonoro("../sfx/moeda.m4a")
   } else {

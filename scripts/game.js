@@ -44,10 +44,10 @@ function processarClique(event)
 
   if (Math.abs(diferencaTempo - INTERVALO_CLIQUE_IDEAL) <= MARGEM_TEMPO) 
   {
-    aumentaPontuacao(5);
+    aumentaPontuacao(2);
   } else 
   {
-    perdePontuacao(5);
+    perdePontuacao(2);
   }
 
   tempoUltimoClique = tempoAtual;
