@@ -9,149 +9,6 @@ let respostaCorreta;
 
 let perguntasVisitadas = [];
 
-const questoes = [
-  [
-    {
-    "pergunta": "Qual a função do sistema cardiovascular?",
-    "respostas": [
-        "Transportar nutrientes e oxigênio",
-        "Eliminar resíduos e hormônios",
-        "Levar gás carbônico e substâncias tóxicas dos tecidos para eliminação"
-    ],
-    "correta": 0
-  }
-  ,{
-    "pergunta": "Quantas camadas o coração tem?",
-    "respostas": [
-        "Três",
-        "Quatro",
-        "Cinco"
-    ],
-    "correta": 0
-  }
-  ],
-  [
-    {
-    "pergunta": "Quantas cavidades tem o coração?",
-    "respostas": [
-        "Quatro",
-        "Duas",
-        "Três"
-    ],
-    "correta": 0
-  },
-  {
-    "pergunta": "Qual a função dos átrios?",
-    "respostas": [
-        "Transportar o sangue para o corpo",
-        "Receber o sangue",
-        "Impulsionar o sangue"
-    ],
-    "correta": 1
-  }],
-  [
-    {
-      "pergunta": "Quantos vasos sanguíneos temos?",
-      "respostas": [
-          "Dois",
-          "Três",
-          "Quatro"
-      ],
-      "correta": 1
-    },
-    {
-      "pergunta": "Uma artéria (1) leva o sangue para o coração, que através de uma artéria (2) direciona para os pulmões (3), depois repetindo o mesmo processo. Ache o erro.",
-      "respostas": [
-          "1",
-          "2",
-          "3"
-      ],
-      "correta": 0
-  }],
-
-
-
-  [
-    {
-      "pergunta": "Antes de ir para o lado esquerdo (vermelho), para onde o coração bombeia o sangue?",
-      "respostas": [
-          "Para os pulmões",
-          "Para o corpo",
-          "Para o átrio direito"
-      ],
-      "correta": 0
-    },
-  {
-    "pergunta": "Quais são os vasos sanguíneos caracterizados por ter uma parede espessa e elástica?",
-    "respostas": [
-        "Artérias",
-        "Veias",
-        "Capilares"
-    ],
-    "correta": 0
-  }],
-  [
-    {
-      "pergunta": "Qual a função dos ventríolos?",
-      "respostas": [
-        "Fazer trocas gasosas",
-        "Proteger o coração",
-        "Impulsionar o sangue"
-      ],
-      "correta": 2
-    },   
-    {
-    "pergunta": "Quais são os vasos sanguíneos caracterizados por ter uma parede fina e válvulas?",
-    "respostas": [
-        "Artérias",
-        "Veias",
-        "Capilares"
-    ],
-    "correta": 1
-  },
-  ],
-  [
- 
-  {
-    "pergunta": "Qual camada do coração tem o papel de revestir externamente o coração e é extremamente fibrosa?",
-    "respostas": [
-        "Pericárdio",
-        "Miocárdio",
-        "Endocárdio"
-    ],
-    "correta": 0
-  }, {
-    "pergunta": "Quais são os vasos sanguíneos caracterizados por serem extremamente finos e permitirem trocas gasosas?",
-    "respostas": [
-        "Artérias",
-        "Veias",
-        "Capilares"
-    ],
-    "correta": 2
-  }
-  ],
-  [
-    {
-    "pergunta": "Qual camada do coração tem o papel de revestir internamente o coração?",
-    "respostas": [
-        "Pericárdio",
-        "Miocárdio",
-        "Endocárdio"
-    ],
-    "correta": 2
-  },
-  {
-    "pergunta": "Qual camada do coração é responsável por contrair e relaxar o coração?",
-    "respostas": [
-        "Pericárdio",
-        "Miocárdio",
-        "Endocárdio"
-    ],
-    "correta": 1
-  }
-]
-];
-
 
 function buscarPerguntaAleatoria() 
 {
@@ -165,7 +22,7 @@ function buscarPerguntaAleatoria()
 
   perguntasVisitadas.push(indiceAleatorio);
 
-  exibirPergunta(questoes[ID_PERGUNTA][indiceAleatorio]);
+  exibirPergunta(questoes[ID_PERGUNTA-1][indiceAleatorio]);
 }
 
 function exibirPergunta(pergunta) 
@@ -192,7 +49,7 @@ function exibirPergunta(pergunta)
 function abrirJanela() {
   CRONOMETRO.classList.add("ativa")
   JANELA_FLUTUANTE.classList.add("ativa");
-  startTimer(INTERVALO_PERGUNTA*2/1000);
+  startTimer((INTERVALO_PERGUNTA*2/1000) - 5);
 }
 
 function verificarResposta(idResposta, correta) 
@@ -203,9 +60,10 @@ function verificarResposta(idResposta, correta)
     fecharJanela();
     aumentaPontuacao(200); 
     gameControl();
-
+    efeitoSonoro("../sfx/moeda.m4a")
   } else {
     mostrarRespostaIncorreta(idResposta);
+    efeitoSonoro("../sfx/erro.m4a")
     perdePontuacao(150);
   }
 

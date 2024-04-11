@@ -23,9 +23,12 @@ function gerarDivAleatoria()
 
   const animacao = setInterval(() => {
 
-    const posicaoAtualX = parseInt(div.style.left, 10);
-    console.log(posicaoAtualX)
-    div.style.left = `${posicaoAtualX - VELOCIDADE_MOVIMENTO}px`;
+    let posicaoAtualX = parseInt(div.style.left, 10);
+
+    posicaoAtualX -= VELOCIDADE_MOVIMENTO;
+    div.style.left = `${posicaoAtualX}px`;
+
+
 
     if (posicaoAtualX <= -TAMANHO_DIV_X) 
     {

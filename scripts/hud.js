@@ -59,5 +59,6 @@ function batimento () {
     document.getElementById("coração").style.width = "200px";
     document.getElementById("coração").style.height = "200px";
   }, 100)
+  efeitoSonoro("../sfx/batimento.m4a")
 }
 

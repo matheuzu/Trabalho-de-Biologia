@@ -24,6 +24,7 @@ function verificarColisao(jogador, obstaculo) {
         {
           colidindo = false;            
           perdePontuacao(50);
+          efeitoSonoro("../sfx/tropeco.m4a")
         }
       } 
 

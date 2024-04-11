@@ -11,6 +11,7 @@ let numPerguntas = 0;
 const divIntervalo = document.getElementById("intervalo")
 const divPontuacao = document.getElementById("pontuação")
 
+
 function aumentaPontuacao(pontos) 
 {
   pontuacao += pontos;
@@ -69,3 +70,4 @@ function endRound() {
   alert(`Pontuação final: ${pontuacao} `);
   window.location.reload();
 }
+

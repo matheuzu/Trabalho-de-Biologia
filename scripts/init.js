@@ -1,6 +1,15 @@
 const ID_PERGUNTA = prompt("Qual o id?")
 const INTERVALO_PERGUNTA = 10000; // ms
 
+function efeitoSonoro(url) {
+    var audio = new Audio(url);
+  
+    audio.addEventListener('canplaythrough', function() {
+        audio.play();
+    });
+  } 
+  
+
 function startGame(seconds) {
 
     const target = document.querySelector('#start');
@@ -28,7 +37,9 @@ function startGame(seconds) {
   
                 clearInterval(clock);
                 target.remove();
-                
+
+                efeitoSonoro("../sfx/soundtrack.m4a")
+
                 const intervalo = setInterval(hud, 10);
                 setInterval(gerarDivAleatoria, INTERVALO_GERACAO);
                 setTimeout(buscarPerguntaAleatoria, INTERVALO_PERGUNTA);
