@@ -29,19 +29,20 @@
   opacity: 1;
 }
 
-.titulo {
+#titulo {
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 8px;
 }
 
-.pergunta {
+#pergunta {
   margin-bottom: 16px;
 }
 
-.respostas {
+#respostas {
   display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 
 button {

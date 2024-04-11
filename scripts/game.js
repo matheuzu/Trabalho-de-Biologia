@@ -1,7 +1,7 @@
 const VELOCIDADE = 100;
 const INTERVALO_CLIQUE_IDEAL = 1000; // (ms)
 const MARGEM_TEMPO = 500;
-const PERGUNTAS_POR_PARTIDA = 3;
+const PERGUNTAS_POR_PARTIDA = 2;
 
 let pontuacao = 0;
 let tempoUltimoClique = 0;
@@ -57,7 +57,7 @@ function gameControl() {
 
   numPerguntas++;
 
-  if(numPerguntas == 3) 
+  if(numPerguntas == PERGUNTAS_POR_PARTIDA) 
   {
     setTimeout(endRound, 1000);
   }

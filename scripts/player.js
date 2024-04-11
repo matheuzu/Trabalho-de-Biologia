@@ -5,7 +5,7 @@ document.querySelector("body").addEventListener("keydown", (evento) => {
   if (evento.key === " " && !player.classList.contains("pulo")) 
   {
     player.classList.add("pulo");
-    setTimeout(() => { player.classList.remove("pulo");}, 1000);
+    setTimeout(() => { player.classList.remove("pulo");}, 1500);
   }
 });
 
@@ -23,7 +23,7 @@ function verificarColisao(jogador, obstaculo) {
         if(colidindo) 
         {
           colidindo = false;            
-          perdePontuacao(25);
+          perdePontuacao(50);
         }
       } 
 

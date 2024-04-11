@@ -1,5 +1,5 @@
-const JSON_ID = prompt("Questionário");
-const INTERVALO_PERGUNTA = 2000; // ms
+const ID_PERGUNTA = prompt("Qual o id?")
+const INTERVALO_PERGUNTA = 10000; // ms
 
 function startGame(seconds) {
 

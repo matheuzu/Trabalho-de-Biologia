@@ -1,6 +1,6 @@
 const TAMANHO_DIV_X = 25;
 const TAMANHO_DIV_Y = 100;
-const VELOCIDADE_MOVIMENTO = 7 // pixels por segundo
+const VELOCIDADE_MOVIMENTO = 10
 const INTERVALO_GERACAO = 5000; // milissegundos
 
 function gerarNumeroAleatorio(min, max) {
@@ -24,6 +24,7 @@ function gerarDivAleatoria()
   const animacao = setInterval(() => {
 
     const posicaoAtualX = parseInt(div.style.left, 10);
+    console.log(posicaoAtualX)
     div.style.left = `${posicaoAtualX - VELOCIDADE_MOVIMENTO}px`;
 
     if (posicaoAtualX <= -TAMANHO_DIV_X) 
@@ -32,7 +33,7 @@ function gerarDivAleatoria()
       div.remove();
     }
 
-  }, 1000 / 90); 
+  }, 15); 
 }
 
 const imagens = [
